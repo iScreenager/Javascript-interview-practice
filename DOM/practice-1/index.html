@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button>Click me</button>
+  <p>Click button i will chnage my text</p>
+
+  <script>
+let btn = document.querySelector("button");
+let p = document.querySelector("p");
+
+
+btn.addEventListener("click", ()=>{
+  btn.innerText = "I got clicked";
+  btn.style.backgroundColor = "green";
+  p.textContent = "Hey I got changed 😉"
+
+})
+  </script>
+</body>
+</html>

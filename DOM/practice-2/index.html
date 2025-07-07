@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    body{
+  text-align: center;
+  margin: 20%;
+    }
+    
+    img {
+      width: 200px;
+      height: 200px;
+    }
+  </style>
+  <body>
+    <div>
+      <img
+      src="https://images.pexels.com/photos/1557652/pexels-photo-1557652.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+      alt="image-1"
+      class="img1" />
+
+    <img
+      src="https://i.pinimg.com/originals/9c/b0/70/9cb070d62dc738a0c3a1a408d68e4af5.jpg"
+      alt="image-2"
+      class="img2" />
+    </div>
+    
+    <button>Swap image</button>
+  </body>
+
+  <script>
+    let img1 = document.getElementsByClassName("img1")[0];
+    let img2 = document.getElementsByClassName("img2")[0];
+    let btn = document.querySelector("button");
+
+  btn.addEventListener("click", ()=>{
+    
+    let src1 = img1.src;
+    let src2 = img2.src;
+
+     img1.src = src2;
+     img2.src = src1;
+  })
+
+    
+  </script>
+</html>
