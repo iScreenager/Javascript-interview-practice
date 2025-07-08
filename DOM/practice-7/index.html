@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  .center{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+  }
+  .bar{
+    width: 200px;
+    height: 15px;
+    background-color: rgb(188, 187, 187);
+    border-radius: 20px;
+  }
+  .progress{
+    transition: all ease-in 0.2s;
+    height: 100%;
+    background-color: green;
+   border-radius: 20px;
+   box-sizing: border-box;
+  }
+  h5{
+    opacity: 0;
+  }
+</style>
+<body>
+  <div class="center">
+   <h5>Download Completed</h5>
+    <div class="bar">
+      <div class="progress"></div>
+
+    </div>
+
+  </div>
+</body>
+<script>
+  let progress = document.querySelector(".progress");
+  let h = document.querySelector("h5");
+let count = 0;
+let timer = setInterval(()=>{
+ 
+  progress.style.width = count + '%';
+   if(count === 100){
+    h.style.opacity = 1;
+    clearInterval(timer);
+  }
+  count++;
+},50);
+
+</script>
+</html>
